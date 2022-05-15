@@ -1,0 +1,76 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++-10 生成活动文件",
+            "command": "/usr/local/bin/g++-10",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I${workspaceRoot}/lib/glfw/include",
+                "-I${workspaceRoot}/glad/include",
+                "-I${workspaceRoot}/lib/glm",
+                "${workspaceRoot}/lib/glfw/libglfw3.a",
+                "-framework",
+                "Cocoa",
+                "-framework",
+                "OpenGL",
+                "-framework",
+                "GLUT",
+                "-framework",
+                "IOKit",
+                "-framework",
+                "CoreVideo"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang++ 生成活动文件",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I${workspaceRoot}/lib/glfw/include",
+                "-I${workspaceRoot}/glad/include",
+                "-I${workspaceRoot}/lib/glm",
+                "${workspaceRoot}/lib/glfw/libglfw3.a",
+                "-framework",
+                "Cocoa",
+                "-framework",
+                "OpenGL",
+                "-framework",
+                "GLUT",
+                "-framework",
+                "IOKit",
+                "-framework",
+                "CoreVideo"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
